@@ -1,6 +1,6 @@
 //
 //  NSString+Hashing.m
-//
+//  simple-foundation-hashing
 //
 //  Created by Richard Stelling on 19/08/2013.
 //  Copyright (c) 2013 Richard Stelling. All rights reserved.
@@ -27,10 +27,10 @@
             [output appendString:nextString];
     } while (nextString);
     
-    return [output sha1Value];
+    return [output sha1StringValue];
 }
 
-- (NSString *)sha1Value
+- (NSString *)sha1StringValue
 {
     const char *cstr = [self cStringUsingEncoding:NSUTF8StringEncoding];
     NSData *data = [NSData dataWithBytes:cstr length:self.length];
