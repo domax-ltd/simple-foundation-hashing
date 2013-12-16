@@ -14,7 +14,7 @@ const unsigned long SFHInvalidCRC = 0;
 const CFIndex SFHStreamEmpty = 0;
 const CFIndex SFHStreamError = -1;
 
-const NSInteger SFHCRC32MaxBufferSize = 1024;
+const NSInteger SFHCRC32MaxBufferSize = 16384; //TODO: test on device
 
 @implementation NSURL (Hashing)
 

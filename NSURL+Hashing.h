@@ -21,6 +21,7 @@ typedef void(^SFHCpmpleationBlock)(NSURL *url, unsigned long crc32Value, NSError
 
 typedef NS_OPTIONS(NSInteger, SFHCRC32Options)
 {
+    //TODO: Implement this
     SFHProgressUpdateSlow = 1 << 0,
     SFHProgressUpdateFast = 1 << 1,
 };
