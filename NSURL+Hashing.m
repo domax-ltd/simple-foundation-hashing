@@ -65,6 +65,8 @@ const NSInteger SFHCRC32MaxBufferSize = 16384; //TODO: test on device
 
 - (void)crc32ValueForRange:(NSRange)fileRange progress:(SFHProgressBlock)progressBlock compleation:(SFHCpmpleationBlock)compleationBlock options:(SFHCRC32Options)crc32Options
 {
+    NSAssert([self isFileURL], @"CRC32 hashing only works on file URLSs.");
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSError *error = nil;
         
