@@ -10,4 +10,6 @@
 
 @interface NSData (Hashing)
 
+- (unsigned long)crc32Value;
+
 @end
